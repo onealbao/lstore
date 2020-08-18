@@ -18,6 +18,8 @@ option(BUILD_JERASURE "Build Jerasure from source" ON)
 option(BUILD_GRIDFTP "Build GridFTP bindings" OFF)
 option(BUILD_TCMU "Build TCMU-Runner bindings" OFF)
 option(BUILD_HDFS "Build HDFS bindings" OFF)
+#SHUNXING
+option(BUILD_MONGODB "Build MONGODB bindings" ON)
 
 option(ENABLE_COVERAGE "Enable code coverage" OFF)
 option(ENABLE_ASAN "Enable address sanitizer" OFF)
@@ -353,6 +355,10 @@ if(BUILD_TCMU)
 endif()
 if(BUILD_HDFS)
     add_subdirectory(binding/hdfs)
+endif()
+#SHUNXING
+if(BUILD_MONGODB)
+    add_subdirectory(binding/mongodb)
 endif()
 
 # Import packaging
