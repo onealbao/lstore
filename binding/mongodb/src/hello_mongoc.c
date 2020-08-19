@@ -1,5 +1,14 @@
 #include <mongoc/mongoc.h>
-#include <tbx/stack.h>
+#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+#include <apr_pools.h>
+#include <apr_hash.h>
+#include <lio/os.h>
+#include <tbx/string_token.h>
+#include <tbx/type_malloc.h>
+#include "mongodb_lstore.h"
 
 int
 main (int argc, char *argv[])

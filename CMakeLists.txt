@@ -232,6 +232,10 @@ find_package(APR REQUIRED)
 find_package(APRUtil REQUIRED)
 find_package(BerkeleyDB REQUIRED)
 
+#SHUNXING
+# Specify the minimum version you require.
+find_package (mongoc-1.0 1.7 REQUIRED)
+
 # Find external deps we might build
 find_package(Jerasure)
 
